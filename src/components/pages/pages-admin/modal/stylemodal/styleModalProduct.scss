@@ -1,0 +1,38 @@
+.modalProduct{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #9fcdff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.input-product input,
+.input-product label,{
+  width: 250px;
+  cursor: pointer;
+}
+.button-product button{
+  display: block;
+  margin: 1px 12px;
+  cursor: pointer;
+}
+.button-product{
+  margin-top: 10px;
+  display: flex;
+
+}
+.valid-product{
+  color: red;
+}

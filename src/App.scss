@@ -1,0 +1,10 @@
+h2 {
+  color: #7abaff;
+}
+h3{
+  color: #00ff22;
+  &:hover{
+    background-color: #95999c;
+    cursor: pointer;
+  }
+}

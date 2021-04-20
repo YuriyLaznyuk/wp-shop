@@ -1,0 +1,35 @@
+.mainPage-menu{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+.mainPage-menu>li{
+  list-style: none;
+  padding: 5px 10px;
+  border: 1px solid #9fcdff;
+  border-radius: 20px;
+  font-weight: 700;
+  background-color: #9fcdff;
+  &:hover{
+    background-color: #9ede6b;
+    color: #004444;
+    opacity: 0.8;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+
+.mainPage-menu>li>a{
+  text-decoration: none;
+  padding: 5px 10px;
+  &:active{
+    color: black;
+  }
+
+
+
+
+}
+li.active{
+  background-color: #e9a3af;
+}

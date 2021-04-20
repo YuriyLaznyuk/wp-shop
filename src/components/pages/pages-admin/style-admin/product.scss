@@ -1,0 +1,18 @@
+.product{
+  text-align: center;
+}
+.product table{
+  width: 60%;
+  margin: 20px auto;
+  table-layout: fixed;
+  border: 1px solid;
+}
+.product tr,
+.product th,
+.product td,
+{
+  border: 1px solid;
+}
+.product-pointer{
+  cursor: pointer;
+}

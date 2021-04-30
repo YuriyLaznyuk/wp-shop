@@ -7,7 +7,8 @@ import Admin from "./pages/Admin";
 import './pages/style/mainPage.scss';
 import {Provider} from "react-redux";
 import {store} from "./pages/store/index";
-
+import Login from "./pages/protecting-routes/Login";
+import PrivateRoute from "./pages/protecting-routes/PrivateRoute";
 
 function MainPage(props) {
 
@@ -44,11 +45,11 @@ function MainPage(props) {
                     <Route path='/contacts'>
                         <Contacts/>
                     </Route>
-                    <Route path='/admin'>
-                        <BrowserRouter>
-                            <Admin/>
-                        </BrowserRouter>
-                    </Route>
+
+
+                    <Route path='/login'><Login/></Route>
+                    <PrivateRoute path='/admin' component={Admin}/>
+
 
                 </Switch>
 

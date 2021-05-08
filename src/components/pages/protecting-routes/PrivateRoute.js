@@ -3,7 +3,7 @@ import {Redirect, Route, useLocation, BrowserRouter} from 'react-router-dom';
 import {useSelector} from "react-redux";
 
 function PrivateRoute({component: Component, ...rest}) {
-    const login=useSelector(state => state.login.login)
+    const login = useSelector(state => state.login.login);
     const location = useLocation();
     return (
         <div>
@@ -12,11 +12,11 @@ function PrivateRoute({component: Component, ...rest}) {
 
                     login
                         ?
-                    <BrowserRouter>
-                        <Component/>
-                    </BrowserRouter>
-                    :
-                    <Redirect to={{pathname: "/login", state: {from: location}}}/>}
+                        <BrowserRouter>
+                            <Component/>
+                        </BrowserRouter>
+                        :
+                        <Redirect to={{pathname: "/login", state: {from: location}}}/>}
             </Route>
 
         </div>

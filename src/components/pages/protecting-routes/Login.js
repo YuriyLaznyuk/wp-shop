@@ -8,8 +8,8 @@ function Login(props) {
     const dispatch = useDispatch();
     const {login, valid} = useSelector(state1 => state1.login);
 
-    const clickLogin = () => dispatch({type:'click-login'});
-    const inputLogin=(e)=>dispatch({type:'password', payload:e.target.value})
+    const clickLogin = () => dispatch({type: 'click-login'});
+    const inputLogin = (e) => dispatch({type: 'password', payload: e.target.value});
 
     if (login) {
         return <Redirect to={from}/>;
@@ -19,7 +19,7 @@ function Login(props) {
         <div>
             <p>You must log in to view the
                 page at {from.pathname} password: "login"</p>
-            <input onChange={(e)=>inputLogin(e)} type="text" placeholder='login'/>
+            <input onChange={(e) => inputLogin(e)} type="text" placeholder='login'/>
             <button onClick={() => clickLogin()}>LOGIN</button>
             <p>{valid}</p>
 

@@ -9,6 +9,7 @@ import {Provider} from "react-redux";
 import {store} from "./pages/store/index";
 import Login from "./pages/protecting-routes/Login";
 import PrivateRoute from "./pages/protecting-routes/PrivateRoute";
+import MetalCalculator from "./pages/MetalCalculator";
 
 function MainPage(props) {
 
@@ -30,10 +31,17 @@ function MainPage(props) {
                         onClick={() => setLink('contacts')}>
                         <Link to='/contacts'>Contacts</Link>
                     </li>
+
+                    <li className={(link === 'metalcalc') ? 'active' : null}
+                        onClick={() => setLink('metalcalc')}>
+                        <Link to='/metalcalc'>Metal Calculator</Link>
+                    </li>
+
                     <li className={(link === 'admin') ? 'active' : null}
                         onClick={() => setLink('admin')}>
                         <Link to='/admin'>Admin</Link>
                     </li>
+
                 </ul>
                 <Switch>
                     <Route exact path='/home'>
@@ -44,6 +52,10 @@ function MainPage(props) {
                     </Route>
                     <Route path='/contacts'>
                         <Contacts/>
+                    </Route>
+
+                    <Route path='/metalcalc'>
+                        <MetalCalculator/>
                     </Route>
 
 

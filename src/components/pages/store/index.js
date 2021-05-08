@@ -4,13 +4,16 @@ import {productReducer} from "./reducers/productReducer";
 import {navigationReducer} from "./reducers/navigatonReducer";
 import {oneReducer} from "./reducers/oneReducer";
 import {loginReducer} from "./reducers/loginReducer";
+import {menuCalcReducer} from "./reducers/menuCalcReducer";
+import {inputCalcReducer} from "./reducers/inputCalcReducer";
 
 const rootReducers = combineReducers({
     products: productReducer,
     links: navigationReducer,
-    btn:oneReducer,
-    login:loginReducer
-
+    btn: oneReducer,
+    login: loginReducer,
+    calc: menuCalcReducer,
+    input: inputCalcReducer
 
 });
 export const store = createStore(rootReducers, composeWithDevTools());

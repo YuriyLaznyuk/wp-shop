@@ -21,7 +21,7 @@ function MainPage(props) {
                 <ul className='mainPage-menu'>
                     <li className={(link === 'home') ? 'active' : null}
                         onClick={() => setLink('home')}>
-                        <Link to='/home'>Home</Link>
+                        <Link to='/'>Home</Link>
                     </li>
                     <li className={(link === 'about') ? 'active' : null}
                         onClick={() => setLink('about')}>
@@ -44,7 +44,7 @@ function MainPage(props) {
 
                 </ul>
                 <Switch>
-                    <Route exact path='/home'>
+                    <Route exact path='/'>
                         <Home/>
                     </Route>
                     <Route path='/about'>

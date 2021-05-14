@@ -1,0 +1,32 @@
+.watch-container {
+  display: flex;
+  justify-content: center;
+}
+
+.watch-timer {
+  width: 30%;
+  text-align: center;
+  margin: 15px;
+  background-color: #a3acb6;
+
+}
+.watch-timer h1{
+  color: #921c49;
+}
+.timer-button {
+  margin: 10px 0 10px 0;
+}
+
+.timer-button button{
+  margin: 5px 10px ;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid ;
+}
+
+.watch-timer span{
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #ebeef1;
+}

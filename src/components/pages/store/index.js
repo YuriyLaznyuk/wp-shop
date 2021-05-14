@@ -6,6 +6,7 @@ import {oneReducer} from "./reducers/oneReducer";
 import {loginReducer} from "./reducers/loginReducer";
 import {menuCalcReducer} from "./reducers/menuCalcReducer";
 import {inputCalcReducer} from "./reducers/inputCalcReducer";
+import {stopWatchReducer} from "./reducers/stopWatchReducer";
 
 const rootReducers = combineReducers({
     products: productReducer,
@@ -13,7 +14,8 @@ const rootReducers = combineReducers({
     btn: oneReducer,
     login: loginReducer,
     calc: menuCalcReducer,
-    input: inputCalcReducer
+    input: inputCalcReducer,
+    watch: stopWatchReducer
 
 });
 export const store = createStore(rootReducers, composeWithDevTools());

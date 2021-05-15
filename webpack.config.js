@@ -16,8 +16,8 @@ module.exports = {
         watchContentBase: true,
         historyApiFallback:true,
         open:true,
-        contentBase:'./',
-        hot:true
+        // contentBase:'./',
+        // hot:true
     },
     module: {
         rules: [

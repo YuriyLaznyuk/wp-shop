@@ -16,7 +16,7 @@ module.exports = {
         watchContentBase: true,
         historyApiFallback:true,
         open:true,
-        // contentBase:'./',
+        contentBase:'./dist',
         // hot:true
     },
     module: {

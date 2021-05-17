@@ -5,7 +5,7 @@ function Home(props) {
     const dispatch=useDispatch();
     const selector=useSelector(state => state.btn.button);
     return (
-        <div>
+        <div style={{textAlign:'center'}}>
             <h2>Home</h2>
             <button onClick={()=>dispatch({type:"click"})}>
                 {selector ? 'Open' :"Close"}

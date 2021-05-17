@@ -15,4 +15,17 @@
 }
 .product-pointer{
   cursor: pointer;
+  background-color: #e8ebee;
+  &:hover{
+    background-color: #ec97a6;
+  }
 }
+
+.product_head{
+  background-color: #7abaff;
+}
+
+.product_cols{
+  background-color: #0074D9;
+}
+

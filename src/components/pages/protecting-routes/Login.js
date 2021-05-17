@@ -16,7 +16,7 @@ function Login(props) {
     }
 
     return (
-        <div>
+        <div style={{textAlign:'center'}}>
             <p>You must log in to view the
                 page at {from.pathname} password: "login"</p>
             <input onChange={(e) => inputLogin(e)} type="text" placeholder='login'/>

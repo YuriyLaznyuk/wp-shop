@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Switch, Route, Link, BrowserRouter} from "react-router-dom";
+import React from 'react';
+import {Switch, Route, Link, NavLink} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
@@ -10,60 +10,70 @@ import {store} from "./pages/store/index";
 import Login from "./pages/protecting-routes/Login";
 import PrivateRoute from "./pages/protecting-routes/PrivateRoute";
 import MetalCalculator from "./pages/MetalCalculator";
+import Different from "./pages/Different";
 
 function MainPage(props) {
-
-    const [link, setLink] = useState('');
 
     return (
         <Provider store={store}>
             <div>
-                <ul className='mainPage-menu'>
-                    <li className={(link === 'home') ? 'active' : null}
-                        onClick={() => setLink('home')}>
-                        <Link to='/'>Home</Link>
-                    </li>
-                    <li className={(link === 'about') ? 'active' : null}
-                        onClick={() => setLink('about')}>
-                        <Link to='/about'>About</Link>
-                    </li>
-                    <li className={(link === 'contacts') ? 'active' : null}
-                        onClick={() => setLink('contacts')}>
-                        <Link to='/contacts'>Contacts</Link>
-                    </li>
+                <div className='content'>
+                    <ul className='mainPage-menu'>
 
-                    <li className={(link === 'metalcalc') ? 'active' : null}
-                        onClick={() => setLink('metalcalc')}>
-                        <Link to='/metalcalc'>Metal Calculator</Link>
-                    </li>
+                        <li><NavLink to='/'>Home</NavLink></li>
 
-                    <li className={(link === 'admin') ? 'active' : null}
-                        onClick={() => setLink('admin')}>
-                        <Link to='/admin'>Admin</Link>
-                    </li>
+                        <li><NavLink to='/about' activeClassName='selected'>About</NavLink></li>
+
+                        <li><NavLink to='/contacts' activeClassName='selected'>Contacts</NavLink></li>
+
+                        <li><NavLink to='/metalcalc' activeClassName='selected'>Metal Calculator</NavLink></li>
+
+                        <li><NavLink to='/different' activeClassName='selected'>Different</NavLink></li>
+
+                        <li><NavLink to='/admin' activeClassName='selected'>Admin</NavLink></li>
+
+                    </ul>
+                    <Switch>
+                        <Route exact path='/'>
+                            <Home/>
+                        </Route>
+                        <Route path='/about'>
+                            <About/>
+                        </Route>
+                        <Route path='/contacts'>
+                            <Contacts/>
+                        </Route>
+
+                        <Route path='/metalcalc'>
+                            <MetalCalculator/>
+                        </Route>
+
+                        <Route path='/different'>
+                            <Different/>
+                        </Route>
+
+
+                        <Route path='/login'><Login/></Route>
+                        <PrivateRoute path='/admin' component={Admin}/>
+
+
+                    </Switch>
+
+
+                </div>
+
+                <ul className='mainPage-menu footer'>
+
+                    <li><Link to='/'>Home</Link></li>
+
+                    <li><Link to='/about'>About</Link></li>
+
+                    <li><Link to='/contacts'>Contacts</Link></li>
+
+                    <li><Link to='/different'>Different</Link></li>
+
 
                 </ul>
-                <Switch>
-                    <Route exact path='/'>
-                        <Home/>
-                    </Route>
-                    <Route path='/about'>
-                        <About/>
-                    </Route>
-                    <Route path='/contacts'>
-                        <Contacts/>
-                    </Route>
-
-                    <Route path='/metalcalc'>
-                        <MetalCalculator/>
-                    </Route>
-
-
-                    <Route path='/login'><Login/></Route>
-                    <PrivateRoute path='/admin' component={Admin}/>
-
-
-                </Switch>
 
             </div>
 

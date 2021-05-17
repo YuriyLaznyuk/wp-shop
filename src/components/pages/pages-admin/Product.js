@@ -25,10 +25,10 @@ function Product(props) {
             <button className='product-pointer' onClick={() => createModal()}>create product</button>
             <table>
                 <thead>
-                <tr>
+                <tr className='product_head'>
                     <th colSpan={3}>Table Product</th>
                 </tr>
-                <tr>
+                <tr className='product_cols'>
                     <th>name</th>
                     <th>unit</th>
                     <th>price</th>

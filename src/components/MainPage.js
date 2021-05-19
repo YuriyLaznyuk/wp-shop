@@ -19,19 +19,12 @@ function MainPage(props) {
             <div>
                 <div className='content'>
                     <ul className='mainPage-menu'>
-
                         <li><NavLink to='/'>Home</NavLink></li>
-
                         <li><NavLink to='/about' activeClassName='selected'>About</NavLink></li>
-
                         <li><NavLink to='/contacts' activeClassName='selected'>Contacts</NavLink></li>
-
                         <li><NavLink to='/metalcalc' activeClassName='selected'>Metal Calculator</NavLink></li>
-
                         <li><NavLink to='/different' activeClassName='selected'>Different</NavLink></li>
-
                         <li><NavLink to='/admin' activeClassName='selected'>Admin</NavLink></li>
-
                     </ul>
                     <Switch>
                         <Route exact path='/'>
@@ -43,42 +36,25 @@ function MainPage(props) {
                         <Route path='/contacts'>
                             <Contacts/>
                         </Route>
-
                         <Route path='/metalcalc'>
                             <MetalCalculator/>
                         </Route>
-
                         <Route path='/different'>
                             <Different/>
                         </Route>
-
-
                         <Route path='/login'><Login/></Route>
                         <PrivateRoute path='/admin' component={Admin}/>
-
-
                     </Switch>
-
-
                 </div>
 
                 <ul className='mainPage-menu footer'>
-
                     <li><Link to='/'>Home</Link></li>
-
                     <li><Link to='/about'>About</Link></li>
-
                     <li><Link to='/contacts'>Contacts</Link></li>
-
                     <li><Link to='/different'>Different</Link></li>
-
-
                 </ul>
-
             </div>
-
         </Provider>
-
     );
 }
 

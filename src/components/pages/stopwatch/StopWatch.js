@@ -12,7 +12,7 @@ function StopWatch(props) {
 
     useEffect(() => {
         let interval = null;
-        if (active && pause === false) {
+        if (active && !pause) {
             interval = setInterval(() => {
                 setTime(time => time + 10);
             }, 10);
@@ -39,7 +39,8 @@ function StopWatch(props) {
     //redux
     useEffect(() => {
         let interval = null;
-        if (state.active && !state.pause) {
+        let { active, pause } = state;
+        if (active && !pause) {
             interval = setInterval(() => {
                 dispatch({type: 'time', payload: 10});
             }, 10);
@@ -47,7 +48,7 @@ function StopWatch(props) {
             clearInterval(interval);
         }
         return () => clearInterval(interval);
-    }, [state.active, state.pause]);
+    }, [active, pause]);
 
     return (
         <div className='watch-container'>
@@ -84,9 +85,7 @@ function StopWatch(props) {
                   }
                   <button onClick={() => dispatch({type: 'reset'})}>reset</button>
               </div>
-
           </div>
-
         </div>
     );
 }

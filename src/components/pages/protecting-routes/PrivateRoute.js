@@ -9,16 +9,15 @@ function PrivateRoute({component: Component, ...rest}) {
         <div>
             <Route {...rest}>
                 {
-
                     login
-                        ?
-                        <BrowserRouter>
-                            <Component/>
-                        </BrowserRouter>
-                        :
-                        <Redirect to={{pathname: "/login", state: {from: location}}}/>}
+                 ?
+                    <BrowserRouter>
+                        <Component/>
+                    </BrowserRouter>
+                 :
+                    <Redirect to={{pathname: "/login", state: {from: location}}}/>
+                }
             </Route>
-
         </div>
     );
 }
